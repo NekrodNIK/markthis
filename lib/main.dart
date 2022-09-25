@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'markdown_field.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -13,16 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: Scaffold(
-        body: Column(children: const [Expanded(
-          child: TextField(
-            expands: true,
-            minLines: null,
-            maxLines: null,
-            decoration: InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.all(20.0),
-            ),
-        ))],
+        body: Column(children: [Expanded(child: MarkdownField())],
       ))
     );
   }
